@@ -4,14 +4,15 @@ pipeline {
     stages{
         stage('version') {
             steps {
-                bat ' "C:\\Windows\\System32\\cmd.exe" /c python --version'
+                sh "python3 --version"
             }
         }
 
         stage('hello') {
             steps {
-                bat ' "C:\\Windows\\System32\\cmd.exe" /c python demo.py'
+                sh "python3 demo.py"
             }
         }
     }
 }
+
